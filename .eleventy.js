@@ -1,43 +1,54 @@
 const htmlmin = require('html-minifier');
 
 function eleventyConfig(config) {
-	// Passthroughs
-	config.addPassthroughCopy("src/img");
+  // Passthroughs
+  config.addPassthroughCopy('src/assets');
 
-	// Layout aliases
-	config.addLayoutAlias("base", "layouts/base.njk");
+  // Layout aliases
+  config.addLayoutAlias('base', 'layouts/base.njk');
 
-	// Minify HTML
-	const isProduction = process.env.ELEVENTY_ENV === "production";
+  config.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error('Terser error: ', err);
+      // Fail gracefully.
+      callback(null, code);
+    }
+  });
 
-	var htmlMinify = function(value, outputPath) {
-		if (outputPath && outputPath.indexOf('.html') > -1) {
-			return htmlmin.minify(value, {
-				useShortDoctype: true,
-				removeComments: true,
-				collapseWhitespace: true,
-				minifyCSS: true
-			});
-		}
-	}
+  // Minify HTML
+  const isProduction = process.env.ELEVENTY_ENV === 'production';
 
-	// html min only in production
-	if (isProduction) {
-		config.addTransform("htmlmin", htmlMinify);
-	}
+  var htmlMinify = function (value, outputPath) {
+    if (outputPath && outputPath.indexOf('.html') > -1) {
+      return htmlmin.minify(value, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+      });
+    }
+  };
 
-	// Configuration
-	return {
-		dir: {
-			input: "src",
-			output: "dist",
-			includes: "includes",
-			data: "data",
-		},
-		templateFormats: ["html", "njk", "md", "11ty.js"],
-		htmlTemplateEngine: "njk",
-		markdownTemplateEngine: "njk",
-	};
-};
+  // html min only in production
+  if (isProduction) {
+    config.addTransform('htmlmin', htmlMinify);
+  }
+
+  // Configuration
+  return {
+    dir: {
+      input: 'src',
+      output: 'dist',
+      includes: 'includes',
+      data: 'data',
+    },
+    templateFormats: ['html', 'njk', 'md', '11ty.js'],
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
+  };
+}
 
 module.exports = eleventyConfig;

@@ -1,4 +1,33 @@
-@import "@webpixels/css/base";
-@import "@webpixels/css/forms";
-@import "@webpixels/css/components";
-@import "@webpixels/css/utilities";
+@import '@webpixels/css/base';
+@import '@webpixels/css/forms';
+@import '@webpixels/css/components';
+@import '@webpixels/css/utilities';
+@import '_variables.scss';
+@import 'components/_gallery.scss';
+@import 'components/_nav.scss';
+@import 'components/_footer.scss';
+@import '_homepage.scss';
+
+body {
+  background-color: $base-bg;
+}
+span,
+p {
+  font-family: $text-font;
+}
+h1,
+h2,
+h3 {
+  color: $headline-color;
+  font-family: $headline-font;
+}
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+}
+.btn-primary:hover {
+  background-color: darken($primary, 10%);
+  border-color: darken($primary, 10%);
+  font-family: $headline-font;
+  font-size: 18px;
+}

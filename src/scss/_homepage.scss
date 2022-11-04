@@ -1,0 +1,74 @@
+.my-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carousel {
+  // max-width: 1200px;
+  // border: 1px solid $gray-600;
+  // padding: 20px;
+  .carousel-inner {
+    max-height: 600px;
+    .carousel-item {
+      img {
+        width: 100vw !important;
+        max-width: auto !important;
+      }
+    }
+  }
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $margin-btw-elms;
+  background-color: $primary;
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: $secondary-text-color;
+    font-weight: 100;
+  }
+}
+.about {
+  padding: $base-margin;
+  padding-bottom: 0;
+  margin-top: $margin-btw-elms;
+  // background-color: $alternative-bg;
+  max-width: 900px;
+  img {
+    max-height: 500px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: $base-margin;
+    padding-right: $base-margin;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    h2 {
+      text-align: center;
+      border: 1px solid $primary;
+      color: $primary;
+      aspect-ratio: 1/1;
+      width: fit-content;
+      padding: 20px;
+      border-radius: 50%;
+      margin-top: 30px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 2;
+      text-align: center;
+    }
+  }
+}
+.photos {
+  margin: 70px;
+}

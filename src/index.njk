@@ -4,104 +4,67 @@ title: Home
 permalink: '/'
 heading: Minimal Starter Kit for Bootstrap 5 using Eleventy
 ---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Encode+Sans:wght@200;400;500&family=Kolker+Brush&family=Shalimar&display=swap" rel="stylesheet">
 
-<div class="container-xxl">
-    <div class="col-md-9 px-3 mx-auto">
-        <div class="text-center mt-20 mb-12">
-            <h1 class="display-3 ls-tight">
-                <span class="d-inline-flex text-transparent bg-clip-text gradient-bottom-right start-purple-500 end-indigo-400 position-relative">Bootstrap</span> Starter Kit
-            </h1>
-            <p class="text-lg font-semibold mt-5 px-lg-32">
-                Minimal starter template for websites using Bootstrap 5 and Webpixels CSS next to the Eleventy static site generator.
-            </p>
-            <div class="mx-sm-n2 mt-7">
-                <a href="https://github.com/webpixels/bootstrap-starter-kit" class="btn btn-dark" target="_blank">
-                    <i class="bi bi-github me-2"></i>
-                    <span>See on Github</span>
-                </a>
-            </div>
-        </div>
-        <div class="row g-6 g-lg-6">
-            <div class="col-12 col-md-6">
-                <div class="position-relative rounded-4 shadow-4-hover bg-surface-secondary">
-                    <div class="p-5 p-md-5 p-xl-10">
-                        <section>
-                            <header>
-                                <h1 class="h3 ls-tight mb-4">
-                                    Eleventy
-                                </h1>
-                            </header>
-                            <p class="text-muted mb-5">
-                                A simpler static site generator that transforms a directory of templates into HTML.
-                            </p>
-                            <footer>
-                                <a href="https://www.11ty.dev/docs/" class="font-semibold link-primary stretched-link">Documentation -></a>
-                            </footer>
-                        </section>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="position-relative rounded-4 shadow-4-hover bg-surface-secondary">
-                    <div class="p-5 p-md-5 p-xl-10">
-                        <section>
-                            <header>
-                                <h1 class="h3 ls-tight mb-4">
-                                    Bootstrap 5
-                                </h1>
-                            </header>
-                            <p class="text-muted mb-5">
-                                The world’s most popular framework for building responsive, mobile-first sites.
-                            </p>
-                            <footer>
-                                <a href="https://getbootstrap.com/docs/" class="font-semibold link-primary stretched-link">Documentation -></a>
-                            </footer>
-                        </section>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="position-relative rounded-4 shadow-4-hover bg-surface-secondary">
-                    <div class="p-5 p-md-5 p-xl-10">
-                        <section>
-                            <header>
-                                <h1 class="h3 ls-tight mb-4">
-                                    Webpixels CSS
-                                </h1>
-                            </header>
-                            <p class="text-muted mb-5">
-                                Utility and component-centric design system based on Bootstrap 5.
-                            </p>
-                            <footer>
-                                <a href="https://webpixels.io/docs/css/" class="font-semibold link-primary stretched-link">Documentation -></a>
-                            </footer>
-                        </section>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="position-relative rounded-4 shadow-4-hover bg-surface-secondary">
-                    <div class="p-5 p-md-5 p-xl-10">
-                        <section>
-                            <header>
-                                <h1 class="h3 ls-tight mb-4">
-                                    Webpixels Components
-                                </h1>
-                            </header>
-                            <p class="text-muted mb-5">
-                                Explore over 500 fully responsive and carefully designed Bootstrap components.
-                            </p>
-                            <footer>
-                                <a href="https://webpixels.io/components/" class="font-semibold link-primary stretched-link">Start Using -></a>
-                            </footer>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <p class="text-muted text-sm font-semibold text-center my-12">
-            Made with <i class="bi bi-heart mx-1"></i> by <a href="https://webpixels.io/">Webpixels</a>
-        </p>
+{# <img id="mainPhoto" #mainPhoto src="assets/images/siby1.jpg" class="d-block w-100" alt="..."> #}
+
+<div class="my-container">
+  <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/car-1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/car-2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/car-3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+
+  <section class="container text-center about" id="about">
+    <div class="row">
+      <div class="col-7 text">
+        <h2>MS</h2>
+        <p>Hi, I'm Martin, a photographer who is working with a wide range of clients from fashion and commercial/advertising projects, to more intimate portraits and weddings.</p>
+          <a href="#" class="btn btn-sm btn-primary w-full w-lg-auto">
+            Contact me
+          </a>
+      </div>
+
+      <div class="col">
+<img src="assets/images/foto-11.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </section>
+  <section class="photos">
+  {% include "partials/gallery.njk" %}
+  </section>
+
+
+
+  <section class="instagram">
+    <h2>Follow me on Instagram</h2>
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+    <iframe src="https://snapwidget.com/embed/1015192" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+  </section>
 </div>
+
+<!-- SnapWidget -->

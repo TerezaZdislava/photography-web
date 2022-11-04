@@ -1,0 +1,19 @@
+.navbar {
+  position: absolute !important;
+  display: flex;
+  width: 100%;
+  background-color: transparent !important;
+}
+
+a {
+  color: white;
+  font-family: $headline-font;
+  font-size: 18px;
+}
+.collapse {
+  justify-content: end;
+}
+.logo {
+  font-family: $headline-font;
+  font-size: 40px;
+}
