@@ -8,7 +8,7 @@
 a {
   color: white;
   font-family: $headline-font;
-  font-size: 18px;
+  font-size: 18px !important;
 }
 .collapse {
   justify-content: end;

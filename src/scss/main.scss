@@ -24,6 +24,8 @@ h3 {
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
+  font-family: $headline-font;
+  font-size: 18px;
 }
 .btn-primary:hover {
   background-color: darken($primary, 10%);
