@@ -9,10 +9,10 @@ permalink: "portfolio/{{ title | slugify }}/index.html"
 <div style="padding: 150px">
   <h1>{{ title }}</h1>
 </div>
-{# <div class="gallery new" id="gallery">
-{% for imageSrc in homepageGallery -%}
+<div class="gallery new" id="gallery">
+{% for imageSrc in nature -%}
   <figure class="gallery__item gallery__item--{{loop.index}}">
     <img src="{{ imageSrc }}" class="gallery__img" alt="Image {{loop.index}}">
   </figure>
 {% endfor -%}
-</div> #}
+</div>

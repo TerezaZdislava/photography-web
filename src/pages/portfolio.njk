@@ -8,9 +8,11 @@ title: Portfolio
 <div class="portfolio">
   <h1>{{ title }}</h1>
   <div class="gallery new" id="gallery">
-  {% for imageSrc in portfolio -%}
+  {% for part in portfolio -%}
     <figure class="gallery__item gallery__item--{{loop.index}}">
-      <img id="video{{loop.index}}" src="{{ imageSrc }}" class="gallery__img" alt="Image {{loop.index}}">
+      <a href="/portfolio{{ part.link }}">
+        <img id="video{{loop.index}}" src="{{ part.src }}" class="gallery__img" alt="Image {{loop.index}}">
+      </a>
     </figure>
   {% endfor -%}
   </div>

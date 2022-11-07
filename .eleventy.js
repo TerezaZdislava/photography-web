@@ -6,6 +6,7 @@ function eleventyConfig(config) {
 
   // Layout aliases
   config.addLayoutAlias('base', 'layouts/base.njk');
+  // config.addJavaScriptFunction('isBurgerMenuOpen', name => `Hello ${name}!`);
 
   config.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
     try {

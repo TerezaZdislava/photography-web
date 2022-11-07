@@ -21,3 +21,23 @@ a {
   // font-weight: bold;
   color: rgb(83, 32, 204);
 }
+
+// [aria-expanded='true'] {
+//   .navbar {
+//     background-color: $primary !important;
+//   }
+// }
+@media (max-width: 700px) {
+  .logo {
+    font-size: 14px;
+  }
+  .navbar-toggler {
+    background-color: transparent !important;
+  }
+}
+.burgerMenu {
+  background-color: $primary !important;
+  .btn-primary {
+    background-color: darken($primary, 10%);
+  }
+}

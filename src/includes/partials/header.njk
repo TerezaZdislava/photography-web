@@ -36,3 +36,11 @@
     </div>
   </div>
 </nav>
+
+{% set js %}
+{% include "../../js/header.js" %}
+{% endset %}
+<!-- feed it through our jsmin filter to minify -->
+<script>
+  {{ js | jsmin | safe }}
+</script>
