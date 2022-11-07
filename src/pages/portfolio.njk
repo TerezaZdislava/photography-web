@@ -1,0 +1,24 @@
+---
+title: Portfolio
+---
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Encode+Sans:wght@200;400;500&family=Kolker+Brush&family=Shalimar&display=swap" rel="stylesheet">
+
+<div class="portfolio">
+  <h1>{{ title }}</h1>
+  <div class="gallery new" id="gallery">
+  {% for imageSrc in portfolio -%}
+    <figure class="gallery__item gallery__item--{{loop.index}}">
+      <img id="video{{loop.index}}" src="{{ imageSrc }}" class="gallery__img" alt="Image {{loop.index}}">
+    </figure>
+  {% endfor -%}
+  </div>
+</div>
+
+{# {% set js %}
+  {% include "../../index.js" %}
+{% endset %}
+<script>
+  {{ js | jsmin | safe }}
+</script> #}

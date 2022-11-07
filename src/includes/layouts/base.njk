@@ -12,21 +12,14 @@
     </head>
     <body>
         <div id="app">
-
-            <!-- Header -->
             {% include "partials/header.njk" %}
-
-            <!-- Main container -->
             <div id="main-container" role="document">
                 <main role="main">
                     {{ content | safe }}
                 </main>
             </div>
-
-            <!-- Footer -->
             {% include "partials/footer.njk" %}
         </div>
-
         <script src="{{ '/js/main.js' | url }}"></script>
     </body>
 </html>

@@ -1,35 +1,9 @@
-{# <script src="../index.js"></script> #}
-<!-- capture the JS content as a Nunjucks variable -->
-
-
-<div class="gallery" id="gallery">
-  <figure class="gallery__item gallery__item--1">
-    <img src="../assets/images/foto-1.jpg" class="gallery__img" alt="Image 1">
+<div class="gallery new" id="gallery">
+{% for imageSrc in homepageGallery -%}
+  <figure class="gallery__item gallery__item--{{loop.index}}">
+    <img id="video{{loop.index}}" src="{{ imageSrc }}" class="gallery__img" alt="Image {{loop.index}}">
   </figure>
-  <figure class="gallery__item gallery__item--2">
-    <img id="video" src="../assets/images/foto-2.jpg" class="gallery__img" alt="Image 2">
-  </figure>
-  <figure class="gallery__item gallery__item--3">
-    <img src="../assets/images/foto-3.jpg" class="gallery__img" alt="Image 3">
-  </figure>
-  <figure class="gallery__item gallery__item--4">
-    <img src="../assets/images/foto-5.jpg" class="gallery__img" alt="Image 4">
-  </figure>
-  <figure class="gallery__item gallery__item--5">
-    <img src="../assets/images/foto-4.jpg" class="gallery__img" alt="Image 5">
-  </figure>
-  <figure class="gallery__item gallery__item--6">
-    <img src="../assets/images/foto-6.jpg" class="gallery__img" alt="Image 6">
-  </figure>
-    <figure class="gallery__item gallery__item--7">
-    <img src="../assets/images/foto-7.jpg" class="gallery__img" alt="Image 6">
-  </figure>
-    <figure class="gallery__item gallery__item--8">
-    <img src="../assets/images/foto-8.jpg" class="gallery__img" alt="Image 6">
-  </figure>
-    <figure class="gallery__item gallery__item--9">
-    <img src="../assets/images/foto-10.jpg" class="gallery__img" alt="Image 6">
-  </figure>
+{% endfor -%}
 </div>
 
 {% set js %}

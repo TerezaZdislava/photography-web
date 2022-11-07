@@ -1,7 +1,9 @@
+{% set currentUrl = page.url %}
+
 <nav class="navbar navbar-expand-lg navbar-dark px-0 py-3">
   <div class="container-xl">
     <!-- Logo -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <span class="text-lg logo">{{ site.authorName}}</span>
     </a>
     <!-- Navbar toggle -->
@@ -12,12 +14,22 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <!-- Nav -->
       <div class="navbar-nav">
-        <a class="nav-item nav-link text-md" href="#about">About</a>
-        <a class="nav-item nav-link text-md" href="#">Portfolio</a>
+        <li>
+          <a class="nav-item nav-link text-md" href="/#about">About</a>
+        </li>
+          {% for link in collections.pages %}
+            <li [aria-current="page"]>
+              <a class="nav-item nav-link text-md"
+                {% if link.url in currentUrl %} aria-current="page" {% endif %}
+                href="{{ link.url }}">
+                  {{ link.data.title }}
+              </a>
+            </li>
+          {%- endfor %}
       </div>
       <!-- Action -->
       <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-        <a href="#" class="btn btn-sm btn-primary w-full w-lg-auto">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{ authorEmail.email }}" target="_blank" class="btn btn-sm btn-primary w-full w-lg-auto">
           Say hi
         </a>
       </div>

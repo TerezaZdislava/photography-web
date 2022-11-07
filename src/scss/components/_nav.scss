@@ -17,3 +17,7 @@ a {
   font-family: $headline-font;
   font-size: 40px;
 }
+[aria-current='page'] {
+  // font-weight: bold;
+  color: rgb(83, 32, 204);
+}

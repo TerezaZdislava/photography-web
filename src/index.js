@@ -5,16 +5,15 @@ let images = [
 ];
 let index = 0;
 
-const imgElement = document.querySelector('#video');
+const imgElement = document.querySelector('#video2');
 const container = document.querySelector('#gallery');
 
 function change() {
-  console.log(imgElement);
+  // console.log(imgElement);
   imgElement.src = images[index];
   index === 2 ? (index = 0) : index++;
-  console.log('image changed to' + index);
+  // console.log('image changed to' + index);
 }
 window.onload = function () {
   setInterval('change()', 2000);
 };
-console.log('Hi');
