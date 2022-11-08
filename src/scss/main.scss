@@ -3,11 +3,10 @@
 @import '@webpixels/css/components';
 @import '@webpixels/css/utilities';
 @import '_variables.scss';
-@import 'components/_gallery.scss';
 @import 'components/_nav.scss';
+@import 'components/_gallery.scss';
 @import 'components/_footer.scss';
 @import '_homepage.scss';
-@import '_portfolio.scss';
 
 body {
   background-color: $base-bg;
@@ -19,8 +18,9 @@ p {
 h1,
 h2,
 h3 {
-  color: $headline-color;
+  // color: $headline-color;
   font-family: $headline-font;
+  // font-weight: 200;
 }
 .btn-primary {
   background-color: $primary;

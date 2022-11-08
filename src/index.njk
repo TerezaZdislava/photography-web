@@ -5,7 +5,7 @@ permalink: '/'
 ---
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Encode+Sans:wght@200;400;500&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Encode+Sans:wght@200;400;500&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
 
 {# <img id="mainPhoto" #mainPhoto src="assets/images/siby1.jpg" class="d-block w-100" alt="..."> #}
 
@@ -39,21 +39,24 @@ permalink: '/'
 
   <section class="container text-center about" id="about">
     <div class="row">
-      <div class="col-7 text">
-        <h2>MS</h2>
-        <p>Hi, I'm Martin, a photographer who is working with a wide range of clients from fashion and commercial/advertising projects, to more intimate portraits and weddings.</p>
+      <div class="col-lg-7 col-md-12 text">
+        <h2 class="lg-display-headline">Hi, I'm Martin</h2>
+        <p>...a photographer who is working with a wide range of clients from fashion and commercial/advertising projects, to more intimate portraits and weddings.</p>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{ authorEmail.email }}" target="_blank" class="btn btn-sm btn-primary w-full w-lg-auto">
             Contact me
           </a>
       </div>
-
       <div class="col">
-<img src="assets/images/foto-11.jpg" class="d-block w-100" alt="...">
+        <h2 class="sm-display-headline">Hi, I'm Martin</h2>
+        <img src="assets/images/foto-11.jpg" class="d-block w-100" alt="...">
       </div>
     </div>
   </section>
   <section class="photos">
-  {% include "partials/gallery.njk" %}
+    {% include "partials/gallery.njk" %}
+    <a href="/portfolio" class="btn btn-sm btn-primary w-full w-lg-auto">
+      View portfolio
+    </a>
   </section>
 
 

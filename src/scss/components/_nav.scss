@@ -4,40 +4,39 @@
   width: 100%;
   background-color: transparent !important;
 }
-
+.btn-primary {
+  background-color: darken($primary, 10%);
+}
 a {
   color: white;
   font-family: $headline-font;
   font-size: 18px !important;
+  font-weight: 200;
 }
 .collapse {
   justify-content: end;
 }
 .logo {
   font-family: $headline-font;
-  font-size: 40px;
+  font-size: 26px;
+  font-weight: 100;
 }
 [aria-current='page'] {
   // font-weight: bold;
-  color: rgb(83, 32, 204);
+  color: $gray-900;
 }
 
-// [aria-expanded='true'] {
-//   .navbar {
-//     background-color: $primary !important;
-//   }
-// }
 @media (max-width: 700px) {
   .logo {
-    font-size: 14px;
+    font-size: 18px;
   }
   .navbar-toggler {
     background-color: transparent !important;
   }
+  .navbar-nav {
+    margin-bottom: 10px;
+  }
 }
 .burgerMenu {
   background-color: $primary !important;
-  .btn-primary {
-    background-color: darken($primary, 10%);
-  }
 }

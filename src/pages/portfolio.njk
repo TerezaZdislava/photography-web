@@ -3,18 +3,21 @@ title: Portfolio
 ---
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Encode+Sans:wght@200;400;500&family=Kolker+Brush&family=Shalimar&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Encode+Sans:wght@200;400;500&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
 
 <div class="portfolio">
-  <h1>{{ title }}</h1>
-  <div class="gallery new" id="gallery">
-  {% for part in portfolio -%}
-    <figure class="gallery__item gallery__item--{{loop.index}}">
-      <a href="/portfolio{{ part.link }}">
-        <img id="video{{loop.index}}" src="{{ part.src }}" class="gallery__img" alt="Image {{loop.index}}">
-      </a>
-    </figure>
-  {% endfor -%}
+  <div class="gallery-container">
+    <h2 class="headline">{{ title }}</h2>
+    <div class="gallery new" id="gallery">
+    {% for part in portfolio -%}
+      <figure class="gallery__item portfolioFigure gallery__item--{{loop.index}}">
+        <a href="/portfolio{{ part.link }}">
+          <img id="video{{loop.index}}" src="{{ part.src }}" class="gallery__img" alt="Image {{loop.index}}">
+          <span>{{ part.link }}</span>
+        </a>
+      </figure>
+    {% endfor -%}
+    </div>
   </div>
 </div>
 
