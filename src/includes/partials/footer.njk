@@ -1,4 +1,11 @@
 
 <footer class="footer">
-  <span>@{{ site.copyright}} {{ site.authorName}} – All Rights Reserved</span>
+  <span class="copy">@{{ site.copyright}} {{ site.authorName}} – All Rights Reserved</span>
+  <div class="divider"></div>
+  <div class="contacts">
+      <a href={{site.instagram}} target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href={{site.facebook}} target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{ authorEmail.email }}" target="_blank" ><i class="bi bi-envelope"></i></a>
+    <span><i class="bi bi-telephone"></i> {{site.phone}}</span>
+  </div>
 </footer>

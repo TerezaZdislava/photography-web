@@ -1,7 +1,9 @@
 <div class="gallery new" id="gallery">
 {% for imageSrc in homepageGallery -%}
   <figure class="gallery__item homepage gallery__item--{{loop.index}}">
-    <img id="video{{loop.index}}" src="{{ imageSrc }}" class="gallery__img" alt="Image {{loop.index}}">
+    <a href="/portfolio" style="display: contents">
+      <img id="video{{loop.index}}" src="{{ imageSrc }}" class="gallery__img" alt="Image {{loop.index}}">
+    </a>
   </figure>
 {% endfor -%}
 </div>

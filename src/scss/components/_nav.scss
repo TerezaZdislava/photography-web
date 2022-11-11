@@ -1,8 +1,9 @@
 .navbar {
-  position: absolute !important;
+  // position: absolute !important;
   display: flex;
   width: 100%;
-  background-color: transparent !important;
+  background-color: $primary;
+  // background-color: transparent !important;
 }
 .btn-primary {
   background-color: darken($primary, 10%);

@@ -1,13 +1,34 @@
 .footer {
   padding: $margin-btw-elms;
   background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   span {
     color: $secondary-text-color;
+  }
+  .divider {
+    border: solid 1px $secondary-text-color;
+    height: 50px;
+    margin-left: $margin-btw-elms;
+    margin-right: $margin-btw-elms;
+  }
+  .contacts {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 @media (max-width: 700px) {
   .footer {
     padding: 50px 20px;
     font-size: 12px;
+    flex-direction: column;
+    .divider {
+      margin: 20px;
+      width: -webkit-fill-available;
+      height: auto;
+    }
   }
 }
