@@ -1,7 +1,7 @@
 let images = [
-  '../assets/images/foto-2.jpg',
-  '../assets/images/foto-3.jpg',
-  '../assets/images/foto-4.jpg',
+  '../assets/images/homepage/16.avif',
+  '../assets/images/homepage/17.avif',
+  '../assets/images/homepage/18.avif',
 ];
 let index = 0;
 

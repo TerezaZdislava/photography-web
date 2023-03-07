@@ -18,13 +18,13 @@ permalink: '/'
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="assets/images/car-1.jpg" class="d-block w-100" alt="...">
+        <img src="assets/images/homepage/21.avif" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="assets/images/car-2.jpg" class="d-block w-100" alt="...">
+        <img src="assets/images/homepage/22.avif" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="assets/images/car-3.jpg" class="d-block w-100" alt="...">
+        <img src="assets/images/homepage/23.avif" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -46,9 +46,19 @@ permalink: '/'
             Contact me
           </a>
       </div>
-      <div class="col">
+      <div class="col" style="display: flex; justify-content: center">
         <h2 class="sm-display-headline">Hi, I'm Martin</h2>
-        <img src="assets/images/foto-11.jpg" class="d-block w-100" alt="...">
+        {# <img src="assets/images/foto-11.jpg" class="d-block w-100" alt="..."> #}
+        <picture>
+          <source srcset="assets/images/martin.avif 300w" media="(min-width:150px)"/>
+          <img srcset="assets/images/foto-11.jpg" sizes="(max-width: 735px) 100vw, 736px"
+    src="assets/images/martin.avif"
+    alt="Some great alternative text"
+    loading="lazy"
+    decoding="async"
+    width="300"
+    height="600"/>
+        </picture >
       </div>
     </div>
   </section>
