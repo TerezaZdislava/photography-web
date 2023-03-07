@@ -81,6 +81,13 @@
     margin-top: 70px;
   }
 }
+@media (min-width: 1500px) {
+  .carousel {
+    .carousel-inner {
+      max-height: 900px;
+    }
+  }
+}
 @media (min-width: 700px) {
   .sm-display-headline {
     display: none;
